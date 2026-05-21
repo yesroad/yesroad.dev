@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
+  title: 'yesroad.dev',
   description: 'Frontend Engineer Portfolio',
   robots: {
     index: false,
