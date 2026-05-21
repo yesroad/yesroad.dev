@@ -1,6 +1,6 @@
 # yesroad.dev — 포트폴리오
 
-프론트엔드 개발자 김응길의 개인 포트폴리오 사이트입니다.
+**[https://yesroad.dev](https://yesroad.dev)**
 
 ## 기술 스택
 
