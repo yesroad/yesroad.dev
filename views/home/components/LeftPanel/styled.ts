@@ -100,8 +100,8 @@ export const LeftBottom = styled.div``
 
 export const Socials = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
+  flex-direction: row;
+  gap: 1rem;
 
   a {
     display: flex;

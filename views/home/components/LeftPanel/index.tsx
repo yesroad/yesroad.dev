@@ -31,8 +31,6 @@ export function LeftPanel() {
       <LeftTop>
         <Name>김응길</Name>
         <Role>Frontend Developer</Role>
-        <Tagline>서비스 확장성과 운영 효율을 함께 고려한 구조 설계를 지향합니다.</Tagline>
-
         <Nav>
           {NAV_ITEMS.map(({ id, label }) => (
             <NavLink key={id} href={`#${id}`} $active={activeSection === id}>
