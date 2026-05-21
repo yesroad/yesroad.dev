@@ -1,19 +1,16 @@
 ## 배경
 
-개인 프로젝트에서 PR을 올려도 리뷰해줄 사람이 없어 PR 리뷰 문화가 부재한 환경이었습니다. AI를 활용해 PR 리뷰어 역할을 자동화할 수 있을지 실험해보고 싶었고, 동시에 GitHub App과 Webhook 동작 방식을 학습하고자 했습니다.
+혼자 진행하는 프로젝트에서는 PR을 올려도 리뷰해줄 사람이 없었습니다. AI를 활용해 PR 리뷰어 역할을 자동화할 수 있을지 실험해보고 싶었고, 동시에 GitHub App과 Webhook 동작 방식을 학습하고자 했습니다.
 
 ## 접근 방식
 
-- GitHub App을 등록하고 Webhook으로 PR 이벤트(opened, synchronize, reopened) 자동 감지
-- PR diff를 추출해 변경 사항만 분석하도록 처리
-- OpenAI Structured Output을 사용해 일관된 리뷰 형식(모범 사례 / 개선 제안) 생성
-- Commit SHA 기반 중복 리뷰 방지 로직 구현
-- Next.js API Routes + Vercel 서버리스로 배포
+- GitHub App + Webhook으로 PR 이벤트 자동 감지
+- PR diff 기반으로 변경 사항만 추출해 분석
+- LLM(OpenAI API)으로 리뷰 생성 (모범 사례 / 개선 제안 형식으로 구조화)
+- Commit SHA 기반 중복 리뷰 방지
 
 ## 회고
 
-지금 다시 만든다면 세 가지를 개선했을 것 같습니다.
-
-AI 리뷰가 실제로 반영됐는지를 추적해 프롬프트를 개선하는 피드백 루프, diff에서 언어와 프레임워크를 감지해 언어별 전문 리뷰 규칙을 적용하는 분기 처리, GitHub App 설치 과정이 복잡한 만큼 워크플로우 파일만 추가하면 동작하는 GitHub Actions 버전 병행 제공.
+diff 단위가 아닌 코드베이스 전체를 이해한 상태에서 리뷰하는 방식을 시도해보고 싶습니다. 변경된 코드만 보는 것과 전체 맥락을 아는 것은 리뷰 품질에서 차이가 클 것 같습니다.
 
 [GitHub →](https://github.com/yesroad/pr-reviewbot)
