@@ -69,10 +69,9 @@ export const projects: Project[] = [
       'React',
       'TypeScript',
       'TanStack Query',
-      'React Hook Form',
       'Jotai',
     ],
-    previewTags: ['Next.js', 'TanStack Query', 'PG 결제'],
+    previewTags: ['Next.js', 'TanStack Query', 'Jotai'],
     thumb: '/projects/pg-payment.png',
     featured: true,
   },
@@ -148,7 +147,7 @@ export const projects: Project[] = [
     company: '브랜디(Brandi)',
     year: '2021',
     type: 'work',
-    desc: 'Storybook 기반 디자인 시스템을 구축하고 AWS CodeArtifact로 사내 npm 패키지로 배포해 서비스 간 UI 일관성을 확보했습니다.',
+    desc: 'Storybook 기반 디자인 시스템을 구축하고 사내 npm 패키지로 배포해 서비스 간 UI 일관성을 확보했습니다.',
     results: [
       '사내 서비스 간 UI 일관성 확보',
       'Storybook 기반 컴포넌트 문서화',
@@ -161,9 +160,9 @@ export const projects: Project[] = [
   },
   {
     slug: 'cc-kit',
-    title: 'cc-kit -AI 코딩 워크플로우 키트',
+    title: 'cc-kit (AI 코딩 워크플로우 키트)',
     company: '사이드 프로젝트',
-    year: '2025',
+    year: '2026',
     type: 'personal',
     desc: 'Claude Code 확장 플러그인으로 rules, agents, skills, commands를 패키지화해 AI 코딩 워크플로우를 표준화했습니다.',
     results: [
@@ -178,7 +177,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'pr-reviewbot',
-    title: 'pr-reviewbot -GitHub App + OpenAI 자동 코드 리뷰',
+    title: 'pr-reviewbot (GitHub App + OpenAI 자동 코드 리뷰)',
     company: '사이드 프로젝트',
     year: '2025',
     type: 'personal',

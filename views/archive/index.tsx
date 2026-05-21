@@ -80,7 +80,7 @@ export function ArchiveView({ projects, projectContents }: ArchiveViewProps) {
 
       <PageHeader>
         <PageEyebrow>All Projects</PageEyebrow>
-        <PageTitle>전체 프로젝트 아카이브</PageTitle>
+        <PageTitle>전체 프로젝트</PageTitle>
       </PageHeader>
 
       <ArchiveTable projects={projects} onRowClick={openModal} />

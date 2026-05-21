@@ -41,15 +41,13 @@ export const experiences: Experience[] = [
     company: '브랜디(Brandi)',
     role: 'Frontend Developer',
     desc: [
-      '브랜디·하이버 서비스에서 공통으로 사용할 Storybook 기반 디자인 시스템을 구축하고 AWS CodeArtifact 사내 npm 패키지로 배포했습니다. Vue 2 기반 셀러 어드민 개발과 A/B 테스트도 담당했습니다.',
+      '브랜디·하이버 서비스에서 공통으로 사용할 Storybook 기반 디자인 시스템을 구축하고 사내 npm 패키지로 배포했습니다. Vue 2 기반 셀러 어드민 개발과 A/B 테스트도 담당했습니다.',
     ],
     tags: [
       'Vue 2',
       'React',
       'TypeScript',
       'Storybook',
-      'Rollup',
-      'AWS CodeArtifact',
     ],
   },
 ];

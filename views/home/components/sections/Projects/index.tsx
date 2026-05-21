@@ -62,7 +62,7 @@ export function ProjectsSection({ projects, projectContents }: ProjectsSectionPr
         ))}
       </ProjectList>
 
-      <ArchiveLink href="/archive">
+      <ArchiveLink href="/projects">
         전체 프로젝트 보기
         <FiArrowRight size={14} />
       </ArchiveLink>
