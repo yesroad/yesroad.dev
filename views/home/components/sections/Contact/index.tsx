@@ -1,34 +1,60 @@
 'use client'
 
+import { useState } from 'react'
+import { FaGithub } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
+import { FiCopy, FiCheck } from 'react-icons/fi'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import {
-  ContactCard,
-  ContactEyebrow,
-  ContactTitle,
-  ContactDesc,
-  ContactLinks,
-  ContactLink,
+  ContactGrid,
+  ContactItem,
+  IconWrap,
+  ItemLabel,
+  ItemValue,
 } from './styled'
 
+const GITHUB_USERNAME = 'yesroad'
+const EMAIL = 'yesroad.dev@gmail.com'
+
 export function ContactSection() {
+  const [copied, setCopied] = useState<'github' | 'email' | null>(null)
+
+  const handleCopy = async (text: string, key: 'github' | 'email') => {
+    try {
+      await navigator.clipboard.writeText(text)
+      setCopied(key)
+      setTimeout(() => setCopied(null), 1500)
+    } catch {
+      // ignore
+    }
+  }
+
   return (
     <section id="contact">
       <SectionLabel>Contact</SectionLabel>
-      <ContactCard>
-        <ContactEyebrow>Get In Touch</ContactEyebrow>
-        <ContactTitle>새로운 기회를 검토 중입니다.</ContactTitle>
-        <ContactDesc>
-          현재 이직을 준비하고 있습니다. 좋은 팀과 의미 있는 문제를 함께 풀고 싶습니다. 편하게 연락 주세요.
-        </ContactDesc>
-        <ContactLinks>
-          <ContactLink $variant="primary" href="mailto:yesroad.dev@gmail.com">
-            이메일 보내기 →
-          </ContactLink>
-          <ContactLink $variant="secondary" href="https://github.com/yesroad" target="_blank" rel="noreferrer">
-            GitHub ↗
-          </ContactLink>
-        </ContactLinks>
-      </ContactCard>
+      <ContactGrid>
+        <ContactItem>
+          <IconWrap href={`https://github.com/${GITHUB_USERNAME}`} target="_blank" rel="noreferrer">
+            <FaGithub />
+          </IconWrap>
+          <ItemLabel>GitHub</ItemLabel>
+          <ItemValue onClick={() => handleCopy(GITHUB_USERNAME, 'github')}>
+            {copied === 'github' ? <FiCheck /> : <FiCopy />}
+            {GITHUB_USERNAME}
+          </ItemValue>
+        </ContactItem>
+
+        <ContactItem>
+          <IconWrap href={`mailto:${EMAIL}`}>
+            <MdEmail />
+          </IconWrap>
+          <ItemLabel>Email</ItemLabel>
+          <ItemValue onClick={() => handleCopy(EMAIL, 'email')}>
+            {copied === 'email' ? <FiCheck /> : <FiCopy />}
+            {EMAIL}
+          </ItemValue>
+        </ContactItem>
+      </ContactGrid>
     </section>
   )
 }

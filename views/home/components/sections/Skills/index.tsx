@@ -15,11 +15,11 @@ const SKILL_GROUPS = [
   },
   {
     label: 'Tooling',
-    skills: ['Turborepo', 'Storybook', 'Rollup', 'Webpack', 'Git', 'Jenkins'],
+    skills: ['Turborepo', 'Storybook', 'Git', 'Jenkins'],
   },
   {
     label: 'Infra',
-    skills: ['AWS S3', 'CloudFront', 'AWS CodeArtifact'],
+    skills: ['AWS S3'],
   },
 ] as const
 

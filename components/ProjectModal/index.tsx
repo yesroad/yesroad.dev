@@ -1,6 +1,7 @@
 'use client'
 
 import * as Dialog from '@radix-ui/react-dialog'
+import { FiX } from 'react-icons/fi'
 import type { Project } from '@/types'
 import { CompanyBadge } from '@/components/ui/CompanyBadge'
 import { ResultBadge } from '@/components/ui/ResultBadge'
@@ -29,7 +30,9 @@ export function ProjectModal({ project, content, open, onOpenChange }: ProjectMo
       <Dialog.Portal>
         <Overlay />
         <Content aria-describedby={undefined}>
-          <CloseButton aria-label="닫기">×</CloseButton>
+          <CloseButton aria-label="닫기">
+            <FiX size={18} />
+          </CloseButton>
           <MetaRow>
             <CompanyBadge personal={project.type === 'personal'}>{project.company}</CompanyBadge>
           </MetaRow>

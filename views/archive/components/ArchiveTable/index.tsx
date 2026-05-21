@@ -1,5 +1,6 @@
 'use client'
 
+import { FiMaximize2 } from 'react-icons/fi'
 import type { Project } from '@/types'
 import { Tag } from '@/components/ui/Tag'
 import { CompanyBadge } from '@/components/ui/CompanyBadge'
@@ -55,7 +56,9 @@ export function ArchiveTable({ projects, onRowClick }: ArchiveTableProps) {
                 ))}
               </TagList>
             </TagCell>
-            <ExpandCell aria-hidden>⤢</ExpandCell>
+            <ExpandCell aria-hidden>
+              <FiMaximize2 size={13} />
+            </ExpandCell>
           </BodyRow>
         ))}
       </TableBody>

@@ -1,6 +1,7 @@
 'use client'
 
 import styled from '@emotion/styled'
+import { FiArrowLeft } from 'react-icons/fi'
 import type { Project } from '@/types'
 import { colors } from '@/styles/tokens'
 import { ProjectModal } from '@/components/ProjectModal'
@@ -73,9 +74,7 @@ export function ArchiveView({ projects, projectContents }: ArchiveViewProps) {
   return (
     <PageWrapper>
       <BackLink href="/">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M19 12H5M12 19l-7-7 7-7" />
-        </svg>
+        <FiArrowLeft size={13} />
         뒤로가기
       </BackLink>
 
