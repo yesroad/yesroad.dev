@@ -43,7 +43,7 @@ export function LeftPanel() {
         </Nav>
 
         <ResumeBtn
-          href="https://drive.google.com/drive/my-drive?hl=ko"
+          href="https://drive.google.com/file/d/1Q_Ok5kUw-7bWunQjQxMb7GGhayzbyoD5/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >
