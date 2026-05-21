@@ -17,6 +17,10 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Portfolio',
   description: 'Frontend Engineer Portfolio',
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 export default function RootLayout({
