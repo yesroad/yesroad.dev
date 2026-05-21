@@ -1,6 +1,7 @@
 'use client'
 
 import { FaGithub } from 'react-icons/fa'
+import { FiDownload } from 'react-icons/fi'
 import { MdEmail } from 'react-icons/md'
 import { ThemeSwitcher } from '@/components/interactive/ThemeSwitcher'
 import { useNavHighlighter } from '../NavHighlighter/useNavHighlighter'
@@ -12,6 +13,7 @@ import {
   Tagline,
   Nav,
   NavLink,
+  ResumeBtn,
   LeftBottom,
   Socials,
 } from './styled'
@@ -39,6 +41,15 @@ export function LeftPanel() {
             </NavLink>
           ))}
         </Nav>
+
+        <ResumeBtn
+          href="https://drive.google.com/drive/my-drive?hl=ko"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FiDownload size={13} />
+          Resume
+        </ResumeBtn>
 
         <ThemeSwitcher />
       </LeftTop>
