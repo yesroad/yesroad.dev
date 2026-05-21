@@ -63,12 +63,12 @@ const PageTitle = styled.h1`
   letter-spacing: -0.02em;
 `
 
-interface ArchiveViewProps {
+interface ProjectsViewProps {
   projects: Project[]
   projectContents: Record<string, React.ReactNode>
 }
 
-export function ArchiveView({ projects, projectContents }: ArchiveViewProps) {
+export function ProjectsView({ projects, projectContents }: ProjectsViewProps) {
   const { selectedProject, openModal, closeModal } = useArchiveView()
 
   return (

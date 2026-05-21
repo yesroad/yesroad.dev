@@ -1,8 +1,8 @@
 import { projects } from '@/data/projects'
 import { getProjectContent } from '@/lib/mdx'
-import { ArchiveView } from '@/views/archive'
+import { ProjectsView } from '@/views/projects'
 
-export default async function ArchivePage() {
+export default async function ProjectsPage() {
   const projectContents: Record<string, React.ReactNode> = {}
 
   await Promise.all(
@@ -16,5 +16,5 @@ export default async function ArchivePage() {
     return Number(b.year) - Number(a.year)
   })
 
-  return <ArchiveView projects={sortedProjects} projectContents={projectContents} />
+  return <ProjectsView projects={sortedProjects} projectContents={projectContents} />
 }

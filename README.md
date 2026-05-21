@@ -13,10 +13,10 @@
 
 ## 주요 기능
 
-- 4가지 컬러 테마 전환 (teal / amber / indigo / rose)
+- 다크 / 라이트 테마 전환
 - 커서 스포트라이트 인터랙션
 - 프로젝트 상세 모달 (MDX 콘텐츠 렌더링)
-- 전체 프로젝트 테이블 (`/archive`)
+- 전체 프로젝트 테이블 (`/projects`)
 - 반응형 레이아웃 (모바일 대응)
 
 ## 로컬 실행
@@ -34,7 +34,7 @@ pnpm dev
 app/                  # Next.js App Router
 views/                # 페이지 단위 뷰 컴포넌트
   home/               # 메인 페이지
-  archive/            # 아카이브 페이지
+  projects/           # 전체 프로젝트 페이지 (/projects)
 components/           # 공유 컴포넌트
   ui/                 # Tag, CompanyBadge, ResultBadge 등
   interactive/        # ThemeSwitcher, CursorSpotlight
