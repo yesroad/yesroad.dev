@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { FiArrowRight, FiMaximize2, FiCode } from 'react-icons/fi'
 import type { Project } from '@/types'
 import { ProjectModal } from '@/components/ProjectModal'
 import { SectionLabel } from '@/components/ui/SectionLabel'
@@ -35,12 +36,14 @@ export function ProjectsSection({ projects, projectContents }: ProjectsSectionPr
       <ProjectList>
         {featuredProjects.map((project) => (
           <ProjectItem key={project.slug} onClick={() => setSelectedProject(project)}>
-            <ExpandIcon aria-hidden>⤢</ExpandIcon>
+            <ExpandIcon aria-hidden>
+              <FiMaximize2 size={13} />
+            </ExpandIcon>
             <ProjectThumb>
               {project.thumb ? (
                 <Image src={project.thumb} alt={project.title} width={120} height={75} />
               ) : (
-                '⚙'
+                <FiCode size={28} />
               )}
             </ProjectThumb>
             <ProjectContent>
@@ -61,9 +64,7 @@ export function ProjectsSection({ projects, projectContents }: ProjectsSectionPr
 
       <ArchiveLink href="/archive">
         전체 프로젝트 보기
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg>
+        <FiArrowRight size={14} />
       </ArchiveLink>
 
       {selectedProject && (

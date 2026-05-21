@@ -31,9 +31,9 @@ export const ExpandIcon = styled.span`
   position: absolute;
   top: 0.9rem;
   right: 0.9rem;
+  display: inline-flex;
   color: ${colors.textMuted};
   opacity: 0.3;
-  font-size: 0.85rem;
   line-height: 1;
   transition: color 0.15s ease, opacity 0.15s ease;
   pointer-events: none;
