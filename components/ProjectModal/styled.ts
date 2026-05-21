@@ -134,6 +134,14 @@ export const StorySection = styled.div`
     color: ${colors.text};
     line-height: 1.65;
     margin: 0;
+
+    & + p {
+      margin-top: 0.6rem;
+    }
+  }
+
+  p:has(> a:only-child) {
+    margin-top: 1.2rem;
   }
 
   ul {
@@ -160,6 +168,15 @@ export const StorySection = styled.div`
     &:hover {
       text-decoration-color: ${colors.accent};
     }
+  }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.82em;
+    color: ${colors.accent};
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
   }
 
   img {
