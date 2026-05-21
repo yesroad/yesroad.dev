@@ -47,6 +47,10 @@ export const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 export const NavLink = styled.a<{ $active: boolean }>`
@@ -96,7 +100,11 @@ export const ResumeBtn = styled.a`
   }
 `
 
-export const LeftBottom = styled.div``
+export const LeftBottom = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
 
 export const Socials = styled.div`
   display: flex;
