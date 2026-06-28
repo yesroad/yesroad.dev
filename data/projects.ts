@@ -3,7 +3,7 @@ import type { Project } from '@/types';
 export const projects: Project[] = [
   {
     slug: 'cms-monorepo',
-    title: '신규 CMS 통합 모노레포 설계 및 구축',
+    title: '신규 CMS 통합 모노레포 구축 및 운영',
     company: '여기어때컴퍼니',
     year: '2024',
     type: 'work',
@@ -12,6 +12,7 @@ export const projects: Project[] = [
       '신규 CMS를 단일 모노레포 구조에서 추가, 운영',
       '공통 UI 패키지 도입으로 화면 구성 요소 재사용',
       '앱별 개발 및 빌드 명령을 분리해 운영 편의성 개선',
+      '가이드 투어, 계정 관리, 펜션 관리 등 신규 CMS 관리 기능 개발 및 유지보수',
     ],
     tags: ['Next.js', 'Turborepo', 'TypeScript', 'TanStack Query'],
     previewTags: ['Next.js', 'Turborepo', 'TypeScript'],
