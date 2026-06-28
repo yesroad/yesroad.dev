@@ -7,7 +7,7 @@ export const projects: Project[] = [
     company: '여기어때컴퍼니',
     year: '2024',
     type: 'work',
-    desc: '도메인별로 분산 운영되던 백오피스 CMS의 공통 코드 중복과 개별 배포 부담을 줄이기 위해, 새로 운영할 CMS들을 Turborepo 기반 모노레포로 구축했습니다.',
+    desc: '신규 통합 백오피스 CMS를 Turborepo 모노레포로 구축하고, 도메인 단위 독립 구조와 공통 패키지 재사용 체계를 기반으로 개발 및 운영했습니다.',
     results: [
       '신규 CMS를 단일 모노레포 구조에서 추가, 운영',
       '공통 UI 패키지 도입으로 화면 구성 요소 재사용',
