@@ -17,7 +17,7 @@ export const projects: Project[] = [
     ],
     tags: ['Next.js', 'TypeScript', 'Vitest', 'MSW', 'Playwright', 'pnpm'],
     previewTags: ['Next.js', 'Vitest', 'Playwright'],
-    thumb: null,
+    thumb: '/projects/pg-payment.png',
     featured: true,
   },
   {
