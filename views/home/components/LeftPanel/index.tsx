@@ -33,7 +33,7 @@ export function LeftPanel() {
     <Aside>
       <LeftTop>
         <Name>김응길</Name>
-        <Role>Frontend Developer</Role>
+        <Role>Frontend Engineer</Role>
         <Nav>
           {NAV_ITEMS.map(({ id, label }) => (
             <NavLink key={id} href={`#${id}`} $active={activeSection === id}>
